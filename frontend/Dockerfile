@@ -10,4 +10,7 @@ COPY . .
 
 RUN yarn build
 
+# Install static file server
+RUN yarn global add serve
+
 CMD ["yarn", "start"]
