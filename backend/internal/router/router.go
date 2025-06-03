@@ -1,6 +1,8 @@
 package router
 
 import (
+    "fmt"
+    "strings"
     "os"
 
 	"github.com/cvwo-backend/internal/routes"
@@ -18,6 +20,7 @@ func Setup() chi.Router {
     if frontend := os.Getenv("FRONTEND_URL"); frontend != "" {
         allowedOrigins = append(allowedOrigins, frontend)
     }
+    fmt.Println("CORS allowed origins: " + strings.Join(allowedOrigins, ", "))
 
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   allowedOrigins,
