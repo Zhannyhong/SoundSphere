@@ -54,8 +54,8 @@ const EditThread: React.FC = () => {
     }
 
     return (
-        <Container sx={{ py: 8 }}>
-            <Paper sx={{ bgcolor: "white", px: 8, py: 5 }}>
+        <Container sx={{ py: { xs: 3, sm: 8 } }}>
+            <Paper sx={{ bgcolor: "white", p: { xs: 4, sm: 7 } }}>
                 <Button
                     component={Link}
                     to={`/thread/${threadID}`}

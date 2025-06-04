@@ -18,8 +18,8 @@ const ThreadItem: React.FC<Props> = ({ thread }) => {
             <CardActionArea component={Link} to={`/thread/${thread.ID}`}>
                 <CardContent>
                     <Grid container>
-                        <Grid container item xs={1} alignItems="center" justifyContent="space-evenly">
-                            <Stack direction="row" alignItems="center" gap={0}>
+                        <Grid container item xs={1} alignItems="center" justifyContent="space-evenly" spacing={2}>
+                            <Stack direction={{ xs: "column", sm: "row" }} alignItems="center" gap={0}>
                                 <Typography>{thread.votes.length}</Typography>
                                 <KeyboardArrowUpIcon />
                             </Stack>
@@ -68,10 +68,17 @@ const ThreadItem: React.FC<Props> = ({ thread }) => {
                                     {thread.body}
                                 </Typography>
                                 <Grid container item xs={12} sx={{ mt: 2 }}>
-                                    <TagList tags={thread.tags.map((tag) => tag.name)} />
-                                    <Stack direction="row" alignItems="center" gap={0.5} sx={{ ml: "auto" }}>
-                                        <ForumIcon />
-                                        <Typography>{thread.comments.length}</Typography>
+                                    <Stack
+                                        direction="row"
+                                        alignItems="flex-end"
+                                        justifyContent="space-between"
+                                        width="100%"
+                                    >
+                                        <TagList tags={thread.tags.map((tag) => tag.name)} />
+                                        <Stack direction="row" alignItems="center" gap={0.5} sx={{ ml: "auto" }}>
+                                            <ForumIcon />
+                                            <Typography>{thread.comments.length}</Typography>
+                                        </Stack>
                                     </Stack>
                                 </Grid>
                             </Grid>

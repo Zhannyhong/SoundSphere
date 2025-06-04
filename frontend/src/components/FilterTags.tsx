@@ -26,6 +26,7 @@ const FilterTags: React.FC = () => {
     return (
         <Autocomplete
             multiple
+            size="small"
             id="Filter by tags"
             options={tagOptions}
             value={filterTags}

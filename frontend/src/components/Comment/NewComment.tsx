@@ -63,7 +63,7 @@ const NewComment: React.FC = () => {
                     helperText={errors.body?.message}
                     InputProps={{
                         endAdornment: (
-                            <Button variant="contained" type="submit">
+                            <Button variant="contained" size="small" type="submit">
                                 Post Comment
                             </Button>
                         ),

@@ -3,7 +3,7 @@ import Signup from "./Signup";
 import { useAppDispatch, useAppSelector } from "../redux/store";
 import { logout } from "../redux/features/authSlice";
 import React, { useState } from "react";
-import { AppBar, Button, Container, IconButton, Stack, Toolbar, Tooltip, Typography } from "@mui/material";
+import { AppBar, Box, Button, Container, IconButton, Stack, Toolbar, Tooltip, Typography } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
@@ -23,25 +23,41 @@ const Navbar: React.FC = () => {
     return (
         <AppBar elevation={0} position="sticky" color="inherit">
             <Container>
-                <Toolbar disableGutters>
-                    <Typography
+                <Toolbar disableGutters sx={{ display: "flex", justifyContent: "flex-end" }}>
+                    <Box
                         component={Link}
                         to="/"
-                        variant="h6"
-                        noWrap
                         sx={{
                             flexGrow: 1,
-                            mr: 2,
-                            display: { xs: "none", md: "flex" },
-                            fontFamily: "monospace",
-                            fontWeight: 700,
-                            letterSpacing: ".3rem",
-                            color: "inherit",
+                            mr: 1,
+                            display: "flex",
+                            alignItems: "center",
                             textDecoration: "none",
                         }}
                     >
-                        SoundSphere
-                    </Typography>
+                        <Box
+                            component="img"
+                            src="/soundsphere.png"
+                            alt="SoundSphere Logo"
+                            sx={{
+                                height: 56,
+                                width: "auto",
+                            }}
+                        />
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            sx={{
+                                display: { xs: "none", sm: "block" },
+                                fontFamily: "monospace",
+                                fontWeight: 700,
+                                letterSpacing: ".3rem",
+                                color: "black",
+                            }}
+                        >
+                            SoundSphere
+                        </Typography>
+                    </Box>
                     {username ? (
                         <Stack direction="row" spacing={0}>
                             <Button variant="text" sx={{ textTransform: "none", fontSize: 18 }}>
@@ -54,12 +70,16 @@ const Navbar: React.FC = () => {
                             </Tooltip>
                         </Stack>
                     ) : (
-                        <Stack direction="row" spacing={2}>
+                        <Stack direction="row" spacing={1}>
                             <Button variant="text" onClick={() => setOpenLoginModal(true)}>
                                 Log in
                             </Button>
                             <Login openLoginModal={openLoginModal} setOpenLoginModal={setOpenLoginModal} />
-                            <Button variant="contained" onClick={() => setOpenSignupModal(true)}>
+                            <Button
+                                variant="contained"
+                                sx={{ whiteSpace: "nowrap" }}
+                                onClick={() => setOpenSignupModal(true)}
+                            >
                                 Sign up
                             </Button>
                             <Signup openSignupModal={openSignupModal} setOpenSignupModal={setOpenSignupModal} />
