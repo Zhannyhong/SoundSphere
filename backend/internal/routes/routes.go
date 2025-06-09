@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/cvwo-backend/internal/handlers"
+	"github.com/soundsphere-backend/internal/handlers"
 	"github.com/go-chi/chi/v5"
 )
 

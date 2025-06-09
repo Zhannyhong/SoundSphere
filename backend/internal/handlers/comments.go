@@ -2,10 +2,10 @@ package handlers
 
 import (
 	"errors"
-	"github.com/cvwo-backend/internal/api"
-	"github.com/cvwo-backend/internal/auth"
-	"github.com/cvwo-backend/internal/dataaccess"
-	"github.com/cvwo-backend/internal/models"
+	"github.com/soundsphere-backend/internal/api"
+	"github.com/soundsphere-backend/internal/auth"
+	"github.com/soundsphere-backend/internal/dataaccess"
+	"github.com/soundsphere-backend/internal/models"
 	"github.com/go-chi/chi/v5"
 	"gorm.io/gorm"
 	"net/http"

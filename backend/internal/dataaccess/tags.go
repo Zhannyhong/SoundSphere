@@ -1,8 +1,8 @@
 package data
 
 import (
-	"github.com/cvwo-backend/internal/database"
-	"github.com/cvwo-backend/internal/models"
+	"github.com/soundsphere-backend/internal/database"
+	"github.com/soundsphere-backend/internal/models"
 )
 
 func GetTagsByNames(names []string) ([]*models.Tag, error) {

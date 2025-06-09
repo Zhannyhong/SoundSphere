@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/cvwo-backend/internal/models"
+	"github.com/soundsphere-backend/internal/models"
 	"log"
 	"net/http"
 	"os"
 
-	"github.com/cvwo-backend/internal/database"
-	"github.com/cvwo-backend/internal/router"
+	"github.com/soundsphere-backend/internal/database"
+	"github.com/soundsphere-backend/internal/router"
 )
 
 func main() {

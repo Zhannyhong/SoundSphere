@@ -1,10 +1,10 @@
 package handlers
 
 import (
-	"github.com/cvwo-backend/internal/api"
+	"github.com/soundsphere-backend/internal/api"
 	"net/http"
 
-	"github.com/cvwo-backend/internal/dataaccess"
+	"github.com/soundsphere-backend/internal/dataaccess"
 )
 
 func GetTags(w http.ResponseWriter, r *http.Request) {

@@ -1,4 +1,4 @@
-module github.com/cvwo-backend
+module github.com/soundsphere-backend
 
 go 1.21.5
 

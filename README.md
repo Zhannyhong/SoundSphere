@@ -1,39 +1,34 @@
 # SoundSphere
+![landing_page.jpeg](docs/img/screenshot.png)
 
-**By: Lee Zhan Hong**
-
-The forum will be a place where music aficionados can discuss anything music-related! For
+SoundSphere is a simple web forum where music aficionados can discuss anything music-related! For
 instance, users can discuss a new album release, a concert in the area, or
-simply song recommendations. Every thread must be tagged with the genre the
-music discussed relates to for easier filtering. For example, a thread discussing
-a Taylor Swift concert can be tagged with “country” and “pop”. This would help
-music-lovers quickly find threads based on the music genre that they usually
-listen to.
+simply song recommendations.
 
-Extra functionalities:
-1. Ability for the user to upvote threads. Threads with more upvotes are
-   deemed more popular/interesting and would be displayed first.
-2. Ability for the user to sort threads based on timestamp and/or upvotes.
-3. Ability for the user to tag the thread with several tags which can then be
-   used to filter threads
+## 🌟 Key Features
 
-## Technologies Used
+1. Create your profile and become part of the community
+2. Create, edit, and delete your own discussion threads and comments
+3. Upvote threads that resonate (pun intended!) with you
+4. Sort, filter, and search discussion threads
 
-### Frontend: 
-- React
-- Redux
-- Material UI
+## 🛠️ Technologies Used
 
-### Backend: 
-- Go 
-- Go-Chi
-- Gorm
-- Golang-jwt
+### Frontend
+- `React`: Provides the structure for building the user interface
+- `Redux`: Manages global application state, particularly for user authentication and thread data
+- `Material UI`: Provides UI components for a consistent and responsive design
 
-### Database:
-- PostgreSQL
+### Backend
+- `Go`: Serves as a performant backend language 
+- `Go-Chi`: Handles HTTP routing and middleware for building RESTful APIs
+- `Gorm`: Simplifies database interactions with an Object-Relational Mapping (ORM) for PostgreSQL
+- `Golang-jwt`: Implements account-based authentication using JSON Web Tokens (JWT)
 
-## Usage
+### Database
+- `PostgreSQL`: Stores application data
+
+## 🧑🏽‍💻 Usage
 
 ### Requirements
 - Git 
@@ -41,11 +36,11 @@ Extra functionalities:
 
 ### Setup
 1. Clone this repository:
-```git clone https://github.com/Zhannyhong/cvwo-assignment```
+```git clone https://github.com/Zhannyhong/SoundSphere.git```
 2. Change directory into the cloned repository:
-```cd cvwo-assignment```
+```cd SoundSphere```
 3. Build and run the docker containers: 
-```docker-compose up -d```
+```docker compose up -d```
 
 The forum can then be viewed at `http://localhost:3000`. By default, the database will be populated with data from 
 `database/database.sql`. The users already in the database can be logged in using the same password as their username.
